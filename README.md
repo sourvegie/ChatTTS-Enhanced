@@ -10,6 +10,7 @@
 - 支持调节语速、停顿、笑声、口语化程度等参数。
 - 支持导入ChatTTS Speaker音色。详情看帮助。
 - 支持储存音色配置与选项配置。方便管理。
+- 在苹果硅 Mac 上自动启用 MPS GPU 加速。
 
 
 ## 离线一键整合包
@@ -66,8 +67,9 @@ conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=
 ```
 Mac
 ```
-conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 cpuonly -c pytorch
+conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 -c pytorch
 ```
+> PyTorch 2.0 及以上版本在苹果硅 Mac 上默认包含 MPS 支持，程序会在检测到可用的 GPU 时自动启用。
 
 ```
 pip install resemble-enhance
